@@ -1,4 +1,4 @@
-# Uso basico de las clases y variables
+#region Uso basico de las clases y variables
 def print_hi(name, age):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}. Your age is {age}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -13,9 +13,9 @@ if userName == 'Maine':
 userName = 'Christian'
 userAge = 20
 print_hi(userName, userAge)
+#endregion
 
-
-# Clases con estructuras y variables internas de la clase
+#region Clases con estructuras y variables internas de la clase
 class NewComputer:
     def __init__(self, cpu='Intel', gpu='Nvidia', ram='Hyperx'):
         print('My Computer is Building')
@@ -38,9 +38,9 @@ print('But after that, his gpu has broken')
 del titianPC.ssdPart
 titianPC.gpuPart = '3060TI'
 titianPC.showPCPart()
+#endregion
 
-
-# Arrays y List. Funciones del mismo
+#region Arrays y List. Funciones del mismo
 age = [1, 7, 14]
 print(age)
 
@@ -72,7 +72,9 @@ print(multiAge[0][2])
 print(multiAge[3][0])
 
 print(type(userName))  # Print del tipo de variable
+#endregion
 
+#region Multiples Variables y funciones para str
 name, age, cute = 'Maiine', 21, False # Multiples variables
 print((name, age, cute))
 
@@ -86,7 +88,9 @@ print(name.isalpha())  # Revisa si son letras, devuelve booleanos
 print(name.count('i'))  # Cuenta la cantidad de 'i' que hay
 print(name.replace('i', 'e'))  # Reemplaza la variable que le pidas, por la que le des
 print(name*3)  # Multiplica el valor que le pases, sirve con str
+#endregion
 
+#region Account Creation
 # Creacion de cuenta con Input en consola y While
 '''
 account_Create = False
@@ -94,7 +98,7 @@ account_Create = False
 while not account_Create:
     new_UserName = input('Select your username ')
     new_PassWord = input('Select your password ')
-    new_PassWord_Confirm = input('Select your password ')
+    new_PassWord_Confirm = input('Confirm your password ')
     # Los Inputs son strings, hay que transformarlos si querermos otro valor
 
     if new_PassWord == new_PassWord_Confirm:
@@ -103,6 +107,7 @@ while not account_Create:
     else:
         print('The passwords is not the same')
 '''
+#endregion
 
 # Podes importar lo que sea sin rerferencia que genial es esto la concha de la lora
 import ImportGeneral

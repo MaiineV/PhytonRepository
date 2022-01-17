@@ -1,3 +1,5 @@
+# region Finish Class
+"""
 # region Uso basico de las clases y variables
 import time
 
@@ -190,7 +192,7 @@ if bool_region_for:
 # endregion
 
 # region Loop Statement Controllers
-"""
+
 while True:
     name = input('Whats your name? ')
     if name != '':
@@ -208,7 +210,7 @@ for i in range(1, 21):
         pass  # Pass no hace nada, solo un placeholder
     else:
         print(i)
-"""
+
 # endregion
 
 # region Tuple
@@ -221,5 +223,29 @@ print(programmer.index(21))  # Devuelve el index de la variable
 # Podes crear un if junto con un for para que revise una lista o un tuple
 if 'Maiine' in programmer:
     print('Maiine is here')
+# endregion
+
+# region Set
+# Set es una lista, mas rapida y de menos recursos, que no tiene orden ni index y
+# no admite valores duplicados, no los cuenta
+
+utensils = {'fork', 'spoon', 'knife'}
+dishes = {'bowl', 'plate', 'cup', 'fork'}
+
+# utensils.update(dishes)  # Con update anadis a la primera lista lo de las segunda
+# dinner_table = utensils.union(dishes)
+
+# utensils.add('CookingKnife')
+# utensils.remove('fork')
+# utensils.clear()  # Limpia listas o arrays
+
+# for i in dinner_table:
+#    print(i)
+
+# print(utensils.difference(dishes))  # Diferencias entre ambas listas, devuelve los valores de la primera
+# print(utensils.intersection(dishes))  # Devuelve lo que sea igual en amabas
+# endregion
+
+"""
 # endregion
 

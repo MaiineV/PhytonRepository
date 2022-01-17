@@ -115,3 +115,45 @@ linea de codigo, basicamente utilizando las comas"""
 #print("Medis unos " + str(height) + " centimetros")
 
 #endregion
+#region math functions
+#import math
+
+#pi = 3.14
+#x = 1
+#y = 2
+#z = 3
+#print(round(pi))
+#print(math.ceil(pi))
+#print(math.floor(pi))
+#print(abs(pi))
+#print(pow(pi,2))
+#print(math.sqrt(pi))
+#print(max(x,y,z))
+#print(min(x,y,z))
+
+#regionend
+#region slicing
+"""slicing sirve para crear un substring sacando datos de otro strings [start:stop:step]"""
+name = "Christian Natel"
+
+#first_name = name[0:9]
+#last_name = name[10:15]
+#funky_name = name [0:15:3]
+#reversed_name = name[::-1]
+#Los corchetes, el primero es inclusivo y el ultimo es exclusivo
+"""para abreviar puedo directamente poner :3 y me va a tomar el 0 como inicio y en el siguiente 10: y va a entender que
+a partir de ese todos los de adelante"""
+#print(first_name)
+#print(last_name)
+#print(funky_name)
+#print(reversed_name)
+
+website1 = "http://google.com"
+website2 = "http://aslanstore.com"
+#en el Slice se utiliza coma " , " no " : "
+slice = slice(7,-4)
+
+print(website1[slice])
+print(website2[slice])
+
+#endregion

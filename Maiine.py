@@ -276,7 +276,18 @@ for key, value in capitals.items():
     print(key, value)
 # endregion
 
-"""
+# region Keyword Arguments
+
+
+def hello(name, age, sex):
+    print('Your name is ' + name)
+    print('Your age is ' + str(age))
+    print('Your sex is ' + sex)
+
+
+# Se puede seleccion a que condicion asignarle cada valor
+hello(age=21, name='Maiine', sex='male')
 # endregion
 
-# region 
+"""
+# endregion

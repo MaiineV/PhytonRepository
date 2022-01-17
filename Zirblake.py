@@ -105,3 +105,13 @@ linea de codigo, basicamente utilizando las comas"""
 
 #endregion
 #region user input
+"""input es cuando la consola te permite ingresar texto"""
+#name = input("Cual es tu nombre?")
+#age = int(input("Cual es tu edad?"))
+#height = float(input ("Cuanto medis?"))
+
+#print("Hola! " + name)
+#print("Que grande sos! " + str(age) + " años")
+#print("Medis unos " + str(height) + " centimetros")
+
+#endregion

@@ -88,7 +88,7 @@ print(name.replace('i', 'e'))  # Reemplaza la variable que le pidas, por la que 
 print(name*3)  # Multiplica el valor que le pases, sirve con str
 
 # Creacion de cuenta con Input en consola y While
-
+'''
 account_Create = False
 
 while not account_Create:
@@ -102,4 +102,12 @@ while not account_Create:
         account_Create = True
     else:
         print('The passwords is not the same')
+'''
+
+# Podes importar lo que sea sin rerferencia que genial es esto la concha de la lora
+import ImportGeneral
+ImportGeneral.print_this('Re Loco el Import')
+
+import math
+
 

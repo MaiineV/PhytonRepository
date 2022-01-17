@@ -73,6 +73,17 @@ print(multiAge[3][0])
 
 print(type(userName)) # Print del tipo de variable
 
-name, age, cute =  'Maiine', 21, False
+name, age, cute = 'Maiine', 21, False # Multiples variables
 print((name, age, cute))
+
+print(len(name))  # Print longitud de la palabra o lo que le pidas
+print(name.find('i'))  # Devuelve el index de la primera letra coincidente
+print(name.capitalize())  # Mayuscula a la primera letra
+print(name.upper())  # Pone en mayuscula la palabra
+print(name.lower())  # Pone en minusculas
+print(name.isdigit())  # Revisa si son digitos numericos, devuelve booleanos
+print(name.isalpha())  # Revisa si son letras, devuelve booleanos
+print(name.count('i'))  # Cuenta la cantidad de 'i' que hay
+print(name.replace('i', 'e'))  # Reemplaza la variable que le pidas, por la que le des
+print(name*3)  # Multiplica el valor que le pases, sirve con str
 

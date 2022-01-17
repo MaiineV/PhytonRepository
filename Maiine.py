@@ -71,7 +71,7 @@ print(multiAge[2])
 print(multiAge[0][2])
 print(multiAge[3][0])
 
-print(type(userName)) # Print del tipo de variable
+print(type(userName))  # Print del tipo de variable
 
 name, age, cute = 'Maiine', 21, False # Multiples variables
 print((name, age, cute))
@@ -86,4 +86,20 @@ print(name.isalpha())  # Revisa si son letras, devuelve booleanos
 print(name.count('i'))  # Cuenta la cantidad de 'i' que hay
 print(name.replace('i', 'e'))  # Reemplaza la variable que le pidas, por la que le des
 print(name*3)  # Multiplica el valor que le pases, sirve con str
+
+# Creacion de cuenta con Input en consola y While
+
+account_Create = False
+
+while not account_Create:
+    new_UserName = input('Select your username ')
+    new_PassWord = input('Select your password ')
+    new_PassWord_Confirm = input('Select your password ')
+    # Los Inputs son strings, hay que transformarlos si querermos otro valor
+
+    if new_PassWord == new_PassWord_Confirm:
+        print('Your account was succesfully create')
+        account_Create = True
+    else:
+        print('The passwords is not the same')
 

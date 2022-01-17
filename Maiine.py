@@ -1,4 +1,9 @@
+# region Finish Class
+"""
 # region Uso basico de las clases y variables
+import time
+
+
 def print_hi(name, age):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}. Your age is {age}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -152,4 +157,95 @@ elif booleano1 == booleano2 or booleano1 == booleano3:
     print('Algunos son iguales')
 elif not booleano1:
     print('Booleano 1 es falso')
+
+booleano1 = None  # Este es el Null, para declarar una variable vacia
+booleano1 = 4
+print(booleano1)  # Si lo declaras como None, la variable pasa a ser generica y podes volver a setearla
 # endregion
+
+# region For and Basic Time
+bool_region_for = False
+for_lenght = 10
+for_top_lenght = 50
+for_name = 'Maiine'
+
+if bool_region_for:
+    # For Basico
+    for i in range(for_lenght):
+        print(i)
+
+    # For con punto de inicio y de final
+    for i in range(for_lenght, for_top_lenght):
+        print(i)
+
+    # For con punto de inicio, final y step para saber cada cuanto print, aca se realiza cada 2
+    for i in range(for_lenght, for_top_lenght, 2):
+        print(i)
+
+    # Podes hacer un for en el rango de un string o un array
+    for i in for_name:
+        print(i)
+
+    for i in range(for_lenght, 0, -1):
+        print(i)
+        time.sleep(1)  # Como esperar tiempo y usar los time
+# endregion
+
+# region Loop Statement Controllers
+
+while True:
+    name = input('Whats your name? ')
+    if name != '':
+        break
+
+phone_number = '15-3894-3036'
+
+for i in phone_number:
+    if i == '-':
+        continue
+    print(i, end='')  # El end hace cambiar el final del print, todo print termina con enter, aca se cambia a espacio
+
+for i in range(1, 21):
+    if i == 13:
+        pass  # Pass no hace nada, solo un placeholder
+    else:
+        print(i)
+
+# endregion
+
+# region Tuple
+# Basicamente es una lista pero ordena y no se puede modificar
+programmer = ('Maiine', 21, 'male')
+
+print(programmer.count("Maiine"))  # Devuelve la cantidad de veces que aparece la variable
+print(programmer.index(21))  # Devuelve el index de la variable
+
+# Podes crear un if junto con un for para que revise una lista o un tuple
+if 'Maiine' in programmer:
+    print('Maiine is here')
+# endregion
+
+# region Set
+# Set es una lista, mas rapida y de menos recursos, que no tiene orden ni index y
+# no admite valores duplicados, no los cuenta
+
+utensils = {'fork', 'spoon', 'knife'}
+dishes = {'bowl', 'plate', 'cup', 'fork'}
+
+# utensils.update(dishes)  # Con update anadis a la primera lista lo de las segunda
+# dinner_table = utensils.union(dishes)
+
+# utensils.add('CookingKnife')
+# utensils.remove('fork')
+# utensils.clear()  # Limpia listas o arrays
+
+# for i in dinner_table:
+#    print(i)
+
+# print(utensils.difference(dishes))  # Diferencias entre ambas listas, devuelve los valores de la primera
+# print(utensils.intersection(dishes))  # Devuelve lo que sea igual en amabas
+# endregion
+
+"""
+# endregion
+

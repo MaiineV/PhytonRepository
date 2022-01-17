@@ -134,7 +134,7 @@ linea de codigo, basicamente utilizando las comas"""
 #regionend
 #region slicing
 """slicing sirve para crear un substring sacando datos de otro strings [start:stop:step]"""
-name = "Christian Natel"
+#name = "Christian Natel"
 
 #first_name = name[0:9]
 #last_name = name[10:15]
@@ -148,12 +148,31 @@ a partir de ese todos los de adelante"""
 #print(funky_name)
 #print(reversed_name)
 
-website1 = "http://google.com"
-website2 = "http://aslanstore.com"
+#website1 = "http://google.com"
+#website2 = "http://aslanstore.com"
 #en el Slice se utiliza coma " , " no " : "
-slice = slice(7,-4)
+#slice = slice(7,-4)
 
-print(website1[slice])
-print(website2[slice])
+#print(website1[slice])
+#print(website2[slice])
+
+#endregion
+#region if statements
+"""If statement: un bloque de codigo que va a ejecutar si(if) su condicion es verdadera(true)"""
+#el orden del "if" "elif" o "else" importa, ya que el que este primero y se cumpla va a ser leido y los demas omitidos
+
+#name = input("Cual es tu nombre?")
+#age = int(input("Cual es tu edad?"))
+#height = float(input("Cuanto medis?"))
+
+#print("Hola! " + name)
+#print("Tu altura es de: "+str(height))
+
+#if age >= 18 :
+    #print("Sos un adulto!")
+#elif age < 0 :
+    #print ("Aun no naciste!")
+#else:
+    #print("Sos un niño!")
 
 #endregion

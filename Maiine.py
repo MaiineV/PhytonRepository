@@ -30,16 +30,16 @@ class NewComputer:
 
 
 maiinePC = NewComputer('I7', 'GTX1660', '16GB')
-maiinePC.showPCPart()
+maiinePC.showpcpart()
 
 titianPC = NewComputer('I9', 'GTX1060', '32BG')
 titianPC.ssdPart = '240GB'
-titianPC.showPCPart()
+titianPC.showpcpart()
 print(f'And he bought a new disc, the total space is {titianPC.ssdPart}')
 print('But after that, his gpu has broken')
 del titianPC.ssdPart
 titianPC.gpuPart = '3060TI'
-titianPC.showPCPart()
+titianPC.showpcpart()
 # endregion
 
 # region Arrays y List. Funciones del mismo
@@ -134,3 +134,22 @@ print(max(x, y, z))
 print(min(x, y, z))
 # endregion
 
+# region Strings Slice
+userName = 'Maiine'
+print(userName[0:3])  # Los string tmb funcionan como arrays y podes pedir segun el index
+print(userName[0::2])  # El ultimo valor es los caractere que salta, 1 es el valor basico, con 2, omite una letra cada 2
+print(userName[slice(2, 5)])  # Parte el texto segun el index pasado
+# endregion
+
+# region Logical Operator
+booleano1 = True
+booleano2 = False
+booleano3 = True
+
+if booleano1 == booleano2 and booleano2 == booleano3:
+    print('Son todos iguales')
+elif booleano1 == booleano2 or booleano1 == booleano3:
+    print('Algunos son iguales')
+elif not booleano1:
+    print('Booleano 1 es falso')
+# endregion

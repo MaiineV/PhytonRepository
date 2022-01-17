@@ -55,3 +55,32 @@ print("sos un humano?: " + str(human))
 
 #endregion
 #region multiple assignment
+"""el multiple asignamiento los que nos permite es asignar multiples variables al mismo tiempo en una misma
+linea de codigo, basicamente utilizando las comas"""
+
+name, age, attractive = "Christian", 20, True
+
+print(name)
+print(age)
+print(attractive)
+
+Patricio = Esteban = Eduardo = Ignacio = 30
+
+print(Patricio)
+
+#endregion
+#region string methods
+name = "christian"
+print (len(name))
+#la funcion "len" sirve para que te diga el largo de la variable
+#print(name.find("t"))
+#print(name.capitalize())
+#print(name.upper())
+#print(name.lower())
+#print(name.isdigit())
+#print(name.isalpha())
+#print(name.count("r"))
+#print(name.replace("r","h"))
+#print(name*3)
+
+#endregion

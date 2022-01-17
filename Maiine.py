@@ -1,4 +1,4 @@
-# region Finish Class
+# region Finished Classes
 """
 # region Uso basico de las clases y variables
 import time
@@ -246,6 +246,37 @@ dishes = {'bowl', 'plate', 'cup', 'fork'}
 # print(utensils.intersection(dishes))  # Devuelve lo que sea igual en amabas
 # endregion
 
+
+# region Diccionarios
+
+capitals = {'USA': 'Washington',
+            'India': 'New Dehli',
+            'China': 'Beijin',
+            'Rusia': 'Moskow'}
+
+# Con update se puede anadir nuevos o modficiar viejos si usan la misma key
+capitals.update({'Argentina': 'CABA'})
+capitals.update({'USA': 'Las Vegas'})
+
+# Pop borra los datos, para evita errores primero se chequea con get
+city_to_delete = 'Maxico'
+if capitals.get(city_to_delete) is not None:
+    capitals.pop(city_to_delete)
+else:
+    print('Esa ciudad no se encuentra en la lista')
+
+# Funciones para diccionarios
+print(capitals.get('Argentina'))
+print(capitals.values())
+print(capitals.keys())
+print(capitals.items())
+
+# For en diccionarios
+for key, value in capitals.items():
+    print(key, value)
+# endregion
+
 """
 # endregion
 
+# region 

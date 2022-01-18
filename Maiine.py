@@ -318,4 +318,29 @@ hello(name='Maiine', time_waiting='2 hours')
 """
 # endregion
 
-# region 
+# region String Format
+
+animal = 'Cow'
+item = 'Table'
+
+# Se puede dejar sin definir, definiendo por valor de index o por keyword
+text = 'The {} jump over the {}'
+text = 'The {0} jump over the {1}'
+text = f'The {animal} jump over the {item}'
+
+print(text.format(animal, item))
+
+# Manera de ordenar los textos para los outputs
+name = 'Maiine'
+
+print('Hi {:10}'.format(name))
+print('Hi {:>10}'.format(name))
+print('Hi {:<10}'.format(name))
+print('Hi {:^10}'.format(name))
+
+# Manera de cambiar la notacion de los numeros
+number = 10003.141968
+
+print('The number is {:.3f}'.format(number))  # Selecciona cuantos decimales muestra
+print('The number is {:,}'.format(number))  # Si anade comas cada 3 digitos
+print('The number is {:E}'.format(number))  # Mostrar con notacion cientifica

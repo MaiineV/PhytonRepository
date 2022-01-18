@@ -289,5 +289,33 @@ def hello(name, age, sex):
 hello(age=21, name='Maiine', sex='male')
 # endregion
 
+
+# region Arguments
+
+
+def plus(*args):
+    num = 0
+    args = list(args)  # Para crea una lista con las variables que se pasan
+    for i in args:
+        num += i
+    return num
+
+
+print(plus(48, 16, 39, 62, 87, 0))
+# endregion
+
+# region Kwargs
+# Los kwargs son argumentos pero odenados en un diccionario, asi pudiendo pasarlos con keywords para su orden
+# Va en orden segun se anaden
+
+
+def hello(**kwargs):
+    print('Hi ' + kwargs['name'] + '! Im waiting for you for like ' + kwargs['time_waiting'])
+
+
+hello(name='Maiine', time_waiting='2 hours')
+# endregion
 """
 # endregion
+
+# region 

@@ -176,3 +176,44 @@ a partir de ese todos los de adelante"""
     #print("Sos un niño!")
 
 #endregion
+#region logical operators (and,or,not)
+""" Son utilizados los logical operators (and, or, not) para checkear si dos o mas condicionales son true or false"""
+
+#temp = int(input("Cual es la temperatura afuera?"))
+
+#if temp >= 0 and temp <= 30 :
+    #print("el clima esta lindo afuera!")
+    #print("sali a dar un paseo!")
+#elif temp < 0 or temp > 30 :
+   # print ("el clima esta feo afuera!")
+    #print ("no salgas!")
+
+#para que el "and" sea valido y se proyecte ambas condiciones tienen que cumplirse, ejemplo si pongo -20 grados
+#no se estaria cumpliendo el >= 0
+
+#para utilizar el "not" hay que colocarle un parentesis a la condicional y agregarle el "not"
+# ejemplo: if not(temp >= 0 and temp <= 30 ):           o        elif not(temp < 0 or temp > 30) :
+#lo que hace el "not" es cambiar algo verdadero a falso o viceversa
+
+#endregion
+#region while loops
+"""while loop es un statment que va a ejecutar su bloque de codigo mientra su condicion sea verdadera"""
+#while 1==1 :
+    #print("hola estoy atrapado en el loop aaaa")
+
+#name = ""
+
+#while len(name) == 0:
+    #name = input("Cual es tu nombre?: ")
+
+#print("Bienvenido! "+name)
+
+"""otra forma de escribirlo"""
+
+#name = None
+
+#while not name :
+    #name = input ("Cual es tu nombre?: ")
+
+#endregion
+#region for loops

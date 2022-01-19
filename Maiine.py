@@ -315,8 +315,7 @@ def hello(**kwargs):
 
 hello(name='Maiine', time_waiting='2 hours')
 # endregion
-"""
-# endregion
+
 
 # region String Format
 
@@ -344,3 +343,23 @@ number = 10003.141968
 print('The number is {:.3f}'.format(number))  # Selecciona cuantos decimales muestra
 print('The number is {:,}'.format(number))  # Si anade comas cada 3 digitos
 print('The number is {:E}'.format(number))  # Mostrar con notacion cientifica
+# endregion
+
+# region Random
+import random
+
+x = random.randint(1, 6)  # Inclusive con el primer y ultimo valor a diferencia de C#
+y = random.random()  # Esto devuelve un float entre 0 y 1
+
+myList = ['rock', 'paper', 'scissors']
+z = random.choice(myList)  # Esto elige un valor aleatorio dentro de la lista
+
+cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'J', 'Q', 'K', 'A']
+random.shuffle(cards)  # Esto mezcla la lista que le pasemos
+
+# endregion
+
+"""
+# endregion
+
+# region

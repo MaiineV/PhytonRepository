@@ -1,7 +1,13 @@
+# region Imports Utiles
+import time  # Libreria de time
+import math  # Libreria de funciones matematicas
+import os  # Libreria de sistema operativo
+import shutil  # Libreria para el copiado de archivo
+# endregion
+
 # region Finished Classes
 """
 # region Uso basico de las clases y variables
-import time
 
 
 def print_hi(name, age):
@@ -121,7 +127,6 @@ while not account_Create:
 import ImportGeneral
 ImportGeneral.print_this('Re Loco el Import')
 
-import math
 # Usando math. podes ver todas las funciones disponibles
 
 pi = 3.14
@@ -359,7 +364,74 @@ random.shuffle(cards)  # Esto mezcla la lista que le pasemos
 
 # endregion
 
+# region Exception
+
+try:  # Intenta lo que tenga dentro, si sale bien, sigue, sino entra en un except
+    numerator = int(input('Select a numerator: '))
+    denominator = int(input('Select a denominator: '))
+    result = numerator / denominator
+except ZeroDivisionError as e:  # El nombre al lado de except declara que error especifico trata (No dividir por 0)
+    print('You cant divide by 0')
+    print(e)  # 'as e' sive para denominar un nombre al error que ocurre, print hace que muestre que error es en consola
+except ValueError as e:  # Este error se basa en si es otro tipo de variable
+    print('Only numbers please')
+    print(e)
+except Exception as e:  # Esto cubre todos los except que no se declaren antes, siempre deberia ir ultimo
+    print('Something went wrong')
+    print(e)
+else:  # Si el try funciona bien y no se activa ningun except, pasa al else
+    print(result)
+finally:  # Haya un error o no, finally siempre se ejecuta al final de la cadena
+    print('The end')
+
+# endregion
+
 """
 # endregion
 
-# region
+# region File Detection
+path = 'C:\\Users\\agust\\Documents\\GitHub\\PhytonRepository\\PyTest.txt'
+# Al final de cada archivo hay que agregarle la terminacion del mismo
+
+if os.path.exists(path):  # Revisa si la ruta existe
+    print('The path exist')
+    if os.path.isfile(path):  # Revisa si es un archivo
+        print('Is a file')
+    elif os.path.isdir(path):  # Revisa si es una carpeta
+        print('Is a directory')
+else:
+    print('The path dont exist')
+# endregion
+
+# region Read a File
+
+# Esto abre el archivo, si se encuentra en el proyecto, solo es necesario el nombre
+# Sino, hay que ponerle el path entero como arriba
+try:  # Si no encuentra el archivo, va a tener un error, usando un try y un except lo solucionamos
+    with open('PyTest.tx') as file:
+        print(file.read())
+        print(file.closed)  # Devuelve si el archivo esta cerrado, dentro del with abierto, se cierra cuando sale
+except FileNotFoundError as e:
+    print('I cant find the file')
+
+# endregion
+
+# region Write a File
+
+text = '\nBueno, deberia andar'
+
+# with open('PyTest.txt', 'w') as file:  # Modulo 'w' es para reescibir un documento
+#    file.write(text)
+
+with open('PyTest.txt', 'a') as file:  # Modulo 'a' es para sumar el texto al ya escrito
+    file.write(text)
+# endregion
+
+# region Copy a File
+'''
+# Necesita import de shutil
+# copyfile() = copia el contenido de un archivo
+# copy() = copyfile() + permission mode + destination can be a directory
+# copy2() = copy() + copies metadata (Creacion del archivo y las modificaciones) 
+'''
+

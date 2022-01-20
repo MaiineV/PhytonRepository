@@ -386,8 +386,7 @@ finally:  # Haya un error o no, finally siempre se ejecuta al final de la cadena
 
 # endregion
 
-"""
-# endregion
+
 
 # region File Detection
 path = 'C:\\Users\\agust\\Documents\\GitHub\\PhytonRepository\\PyTest.txt'
@@ -434,4 +433,45 @@ with open('PyTest.txt', 'a') as file:  # Modulo 'a' es para sumar el texto al ya
 # copy() = copyfile() + permission mode + destination can be a directory
 # copy2() = copy() + copies metadata (Creacion del archivo y las modificaciones) 
 '''
+
+shutil.copyfile('PyTest.txt', 'D:\\Desktop\\Copy.txt')  # Hay que poner una fuente y a donde va
+# endregion
+
+# region Move File
+
+source = 'D:\\Desktop\\Copy.txt'
+destination = 'D:\\Desktop\\Pruebaxd\\Copy.txt'
+
+try:
+    if os.path.exists(destination):
+        print('There is already a file here')
+    else:
+        os.replace(source, destination)  # No se puede mover un archivo entre discos
+        print('The file was move')
+except FileNotFoundError:
+    print('No encontre el archivo')
+# endregion
+
+# region Delete File
+
+the_file = 'NewFolder'
+
+# os.remove(the_file)  # Esto sirve para borrar un archivo, pero no un directorio
+# os.rmdir(the_file)  # Esto sirve para borrar un directorio, solo si esta vacio
+# shutil.rmtree(the_file)  # Esto sirve para borrar un directorio con cosas dentro
+# endregion
+
+# region Modular
+
+# import ImportGeneral
+# import ImportGeneral as Imp
+from ImportGeneral import print_this as pr, hi  # Esto puede importar mas de un def
+# Diferentes tipos de imports
+pr('Hiiii')
+hi()
+
+help('modules')  # Esto te muestra todos los modulos disponibles
+
+"""
+# endregion
 

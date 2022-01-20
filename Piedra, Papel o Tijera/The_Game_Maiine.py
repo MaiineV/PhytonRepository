@@ -2,22 +2,19 @@ import Random_IA as Random
 
 
 def game():
-    valid_answer = True
     posible_choise = ['rock', 'paper', 'scissors']
-    player_choise = ''
+    player_choise = None
 
     rules_dictionary = {'paper': 'rock',
                         'rock': 'scissors',
                         'scissors': 'paper'}
 
-    while valid_answer:
-        player_choise = input('rock, paper or scissors?: ')
-        for i in posible_choise:
-            if player_choise == i:
-                valid_answer = False
-                print('The player choise was ' + player_choise)
-        if valid_answer:
+    while player_choise not in posible_choise:
+        if player_choise is not None:
             print('This is not a valid answer')
+        player_choise = input('rock, paper or scissors?: ').lower()
+
+    print('The player choise was ' + player_choise)
 
     computer_choise = Random.select()
     print('The computer choise was ' + computer_choise)

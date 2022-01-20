@@ -4,7 +4,7 @@ play_again = True
 while play_again:
     SGame.game()
     while True:
-        answer = input('Do you want to play again? (yes/no): ')
+        answer = input('Do you want to play again? (yes/no): ').lower()
         if answer == 'yes':
             pass
             break

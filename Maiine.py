@@ -475,3 +475,41 @@ help('modules')  # Esto te muestra todos los modulos disponibles
 """
 # endregion
 
+# region Class, Constructores y Class Variable
+from ImportGeneral import Car
+
+car_1 = Car('Nissan', '2021', 'Red')
+car_2 = Car('Chevrolet', '2019', 'White')
+
+print(car_1.model, car_1.year, car_1.color)
+print(car_2.model, car_2.year, car_2.color)
+
+car_1.drive()
+car_2.stop()
+# endregion
+
+# region Herencias
+
+class Animal:
+    alive = True
+
+    def sleep(self):
+        print('Sleeping')
+
+    def eat(self):
+        print('Eating')
+
+# Para la herencia luego de una clase, hay que poner entre () la clase padre
+class Fish(Animal):
+    pass
+
+class Dog(Animal):
+    pass
+
+class Hawk(Animal):
+    pass
+
+# Para crear un objeto, hay que asignarle una clase a una variable
+fish = Fish
+dog = Dog
+hawk = Hawk
